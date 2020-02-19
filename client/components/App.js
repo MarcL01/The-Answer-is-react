@@ -46,9 +46,9 @@ export default class App extends Component {
     return (
       <div id={'app'}>
         What is Reactor 2?
-        <Gameboard categories={this.state.results} currentQuestion={this.state.currentQuestion} answeredQuestions={this.state.answeredQuestions} selectQuestion={this.onSelectQuestion.bind(this)}></Gameboard>
-        <Scoreboard score={this.state.score}></Scoreboard>
-        <Response submitResponse={this.checkAnswer.bind(this)}></Response>
+        <Gameboard categories={this.state.results} currentQuestion={this.state.currentQuestion} answeredQuestions={this.state.answeredQuestions} selectQuestion={this.onSelectQuestion.bind(this)}/>
+        <Scoreboard score={this.state.score}/>
+        <Response submitResponse={this.checkAnswer.bind(this)}/>
       </div>
     );
   }

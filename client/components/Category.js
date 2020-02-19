@@ -9,7 +9,12 @@ const Category = props => {
       <div className={'categoryTitle'} data-testid="categoryTitle">{props.title.toUpperCase()}</div>
       {/* display clues for each category */}
       {props.clues.map((clue, i) => {
-        return (<Clue clueObject={clue} key={'clue_' + i} selectQuestion={props.selectQuestion} answered={props.answeredQuestions.includes(clue.id)}></Clue>);
+        return (<Clue
+          clueObject={clue}
+          key={'clue_' + i}
+          selectQuestion={props.selectQuestion}
+          answered={props.answeredQuestions.includes(clue.id)}
+        />);
       })}
     </div>
   );

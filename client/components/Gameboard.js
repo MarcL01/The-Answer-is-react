@@ -6,11 +6,16 @@ import Categories from './Categories';
 const Gameboard = props => {
   return (
     <div data-testid="gameboard" id={props.currentQuestion.question ? 'question' : 'gameboard'}>
-      {props.currentQuestion.question ? <Clue selected={true} clueObject={props.currentQuestion}></Clue> : <Categories categories={props.categories} selectQuestion={props.selectQuestion} answeredQuestions={props.answeredQuestions}></Categories> }
-      {/* was a question clicked?  */}
-      {/* Yes? Show clue */}
-      {/* No? Show Categories */}
-      {true ? 'this is true' : 'this if false'}
+      {props.currentQuestion.question ? 
+      <Clue 
+        selected={true} 
+        clueObject={props.currentQuestion}
+      /> : 
+      <Categories
+        categories={props.categories}
+        selectQuestion={props.selectQuestion}
+        answeredQuestions={props.answeredQuestions}
+      /> }
     </div>
   );
 };
